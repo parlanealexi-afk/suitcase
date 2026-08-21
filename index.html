@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SuitCase+ — Travel Smarter | €29.99 Launch Offer</title>
+<meta name="description" content="Meet SuitCase+, the multifunctional 20-inch spinner suitcase. Launch price €29.99 for the first 20 customers.">
+<meta name="theme-color" content="#070707">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap');
+
+:root {
+  --bg:#070707;
+  --surface:#101010;
+  --surface-2:#151515;
+  --text:#fff;
+  --muted:#b6b6b6;
+  --line:rgba(255,255,255,.10);
+  --accent:#39bde8;
+  --accent-2:#8edff5;
+  --success:#58d68d;
+  --max:1120px;
+  --radius:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background:
+    radial-gradient(circle at 90% 0%,rgba(57,189,232,.18),transparent 32%),
+    radial-gradient(circle at 0% 35%,rgba(57,189,232,.08),transparent 30%);
+}
+img,video{max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(var(--max),calc(100% - 32px));margin-inline:auto}
+
+/* MOBILE-FIRST HEADER */
+.topbar{background:var(--accent);color:#090909;text-align:center;padding:9px 12px;font-size:11px;font-weight:900;letter-spacing:.04em}
+.nav{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-inner{height:62px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:900;letter-spacing:-1.4px}
+.logo b{color:var(--accent)}
+.nav-cta{padding:10px 15px;background:var(--accent);border-radius:999px;color:#111;font-size:12px;font-weight:900}
+
+/* HERO */
+.hero{padding:28px 0 42px}
+.hero-grid{display:flex;flex-direction:column;gap:27px}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(255,255,255,.045);padding:8px 12px;border-radius:999px;font-size:10px;font-weight:900;letter-spacing:.035em}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+h1{font-size:clamp(42px,12vw,68px);line-height:.96;letter-spacing:-.065em;margin:16px 0 18px;font-weight:900}
+h1 em{font-style:normal;color:var(--accent)}
+.hero-copy{font-size:16px;color:#ccc;margin:0 0 18px}
+.price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:10px 0 18px}
+.price{font-size:43px;line-height:1;font-weight:900;letter-spacing:-.06em}
+.old{font-size:17px;color:#858585;text-decoration:line-through}
+.discount{font-size:10px;font-weight:900;background:var(--accent);color:#111;padding:5px 8px;border-radius:6px}
+.cta{width:100%;min-height:54px;display:flex;align-items:center;justify-content:center;border-radius:14px;background:linear-gradient(135deg,#239bc5,#55c9ea);color:#111;font-weight:900;font-size:16px;box-shadow:0 12px 32px rgba(57,189,232,.22);transition:.2s}
+.cta:active{transform:scale(.98)}
+.note{text-align:center;color:#929292;font-size:11px;margin-top:9px}
+.launch{margin-top:16px;border:1px solid rgba(57,189,232,.25);background:linear-gradient(135deg,rgba(57,189,232,.16),rgba(255,255,255,.035));border-radius:16px;padding:14px;font-size:12px;font-weight:800}
+.launch strong{color:var(--accent-2)}
+
+/* VERTICAL VIDEO */
+.video-card{position:relative;border:1px solid var(--line);background:#0d0d0d;border-radius:27px;padding:7px;box-shadow:0 25px 70px rgba(0,0,0,.45);max-width:540px;margin:auto}
+.video-wrap{aspect-ratio:9/16;border-radius:21px;overflow:hidden;background:#111}
+.video-wrap video{width:100%;height:100%;display:block;object-fit:cover}
+.video-tag{position:absolute;top:17px;left:17px;z-index:2;background:rgba(0,0,0,.72);border:1px solid rgba(255,255,255,.12);padding:7px 10px;border-radius:9px;font-size:9px;font-weight:900}
+
+/* TRUST STRIP */
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust div{text-align:center;font-size:10px;color:#aaa}
+.trust b{display:block;color:#fff;font-size:12px;margin-bottom:2px}
+
+/* SECTIONS */
+section{padding:58px 0}
+.alt{background:#0b0b0b}
+.section-kicker{color:var(--accent);font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;margin-bottom:9px}
+.title{font-size:clamp(31px,9vw,52px);line-height:1.02;letter-spacing:-.055em;margin:0 0 13px;font-weight:900}
+.subtitle{font-size:15px;color:#aaa;margin:0 0 28px}
+
+/* BENEFITS */
+.benefits{display:grid;grid-template-columns:1fr;gap:10px}
+.benefit{display:flex;gap:14px;align-items:flex-start;padding:18px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018))}
+.icon{width:39px;height:39px;min-width:39px;border-radius:12px;background:rgba(57,189,232,.13);display:grid;place-items:center;font-size:18px}
+.benefit h3{font-size:15px;margin:0 0 4px}
+.benefit p{font-size:12px;color:#999;margin:0}
+
+/* PRODUCT GALLERY — MOBILE FULL WIDTH / DESKTOP CONSTRAINED */
+.gallery{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  width:100%;
+  margin:0;
+  padding:0;
+}
+.gallery figure{
+  margin:0;
+  padding:0;
+  width:100%;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  overflow:hidden;
+  line-height:0;
+}
+.gallery img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:contain;
+  margin:0;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:#fff;
+}
+.gallery-caption{display:none}
+
+/* PRODUCT STORY */
+.story{display:flex;flex-direction:column;gap:25px}
+.story-image{border:1px solid var(--line);border-radius:23px;padding:7px;background:#111;overflow:hidden}
+.story-image img{width:100%;display:block;border-radius:17px}
+.checks{display:grid;gap:13px;margin:21px 0}
+.check{display:flex;gap:10px;align-items:flex-start}
+.tick{width:23px;height:23px;min-width:23px;border-radius:50%;background:var(--accent);color:#111;display:grid;place-items:center;font-size:11px;font-weight:900}
+.check b{font-size:13px;display:block}
+.check span{font-size:11px;color:#999}
+
+/* OFFER */
+.offer-card{background:linear-gradient(145deg,#239bc5,#ff9855);color:#111;border-radius:27px;padding:28px 21px;text-align:center}
+.offer-card .small{font-size:10px;font-weight:900;letter-spacing:.08em}
+.offer-card h2{font-size:36px;line-height:.98;letter-spacing:-.05em;margin:8px 0 13px}
+.offer-card p{font-size:13px;margin:0 auto 18px;max-width:560px}
+.offer-price{display:flex;justify-content:center;align-items:baseline;gap:10px;margin-bottom:18px}
+.offer-price strong{font-size:46px;letter-spacing:-.06em}
+.offer-price del{font-size:15px;opacity:.55}
+.offer-card .cta{background:#111;color:#fff;box-shadow:none}
+
+/* STEPS */
+.steps{display:grid;gap:10px}
+.step{padding:21px;border:1px solid var(--line);border-radius:18px;background:#0d0d0d}
+.step-num{color:var(--accent);font-size:27px;font-weight:900;line-height:1;margin-bottom:10px}
+.step h3{font-size:15px;margin:0 0 5px}
+.step p{font-size:12px;color:#999;margin:0}
+
+/* FAQ */
+.faq{border-bottom:1px solid var(--line)}
+.faq button{width:100%;padding:18px 0;background:none;border:0;color:#fff;display:flex;justify-content:space-between;align-items:center;text-align:left;font-size:14px;font-weight:800;cursor:pointer}
+.faq button span{color:var(--accent);font-size:20px}
+.faq p{display:none;color:#999;font-size:12px;padding:0 0 17px;margin:0}
+.faq.open p{display:block}
+
+/* FINAL CTA */
+.final{padding:55px 0 70px;text-align:center}
+.final-box{border:1px solid rgba(57,189,232,.24);border-radius:27px;background:linear-gradient(145deg,#17110d,#0d0d0d);padding:32px 20px}
+.final h2{font-size:39px;line-height:.98;letter-spacing:-.055em;margin:0 0 13px}
+.final p{color:#aaa;font-size:13px;margin:0 auto 22px}
+
+/* STICKY MOBILE CTA */
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:80;padding-bottom:env(safe-area-inset-bottom)}
+.sticky a{display:flex;justify-content:center;align-items:center;min-height:50px;background:var(--accent);color:#111;border-radius:15px;font-size:14px;font-weight:900;box-shadow:0 12px 40px rgba(0,0,0,.5)}
+
+/* FOOTER */
+footer{padding:34px 0 95px;border-top:1px solid var(--line);color:#777;font-size:11px}
+.footer-top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-logo{font-size:20px;font-weight:900;color:#fff}
+.footer-logo b{color:var(--accent)}
+footer a{text-decoration:underline}
+.legal{margin-top:25px;font-size:10px;line-height:1.7}
+
+
+@media(min-width:700px){
+  .gallery{
+    width:min(760px,calc(100% - 48px));
+    margin:0 auto;
+    gap:18px;
+  }
+  .gallery figure{
+    border-radius:22px;
+    border:1px solid var(--line);
+    background:#fff;
+    overflow:hidden;
+    box-shadow:0 18px 45px rgba(0,0,0,.18);
+    line-height:0;
+  }
+  .gallery img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+  }
+}
+@media(min-width:1100px){
+  .gallery{
+    width:min(820px,calc(100% - 80px));
+    gap:22px;
+  }
+}
+
+/* TABLET / DESKTOP */
+@media(min-width:700px){
+  .container{width:min(var(--max),calc(100% - 48px))}
+  .nav-inner{height:70px}
+  .hero{padding:75px 0 65px}
+  .hero-grid{display:grid;grid-template-columns:1fr .78fr;gap:55px;align-items:center}
+  .hero-copy{font-size:18px}
+  .benefits{grid-template-columns:1fr 1fr}
+  .gallery{display:flex;flex-direction:column}
+  .gallery figure:first-child{grid-column:auto}
+  .story{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:45px}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .offer-card{padding:48px}
+}
+@media(min-width:980px){
+  section{padding:90px 0}
+  .hero h1{font-size:70px}
+  .benefits{grid-template-columns:repeat(3,1fr)}
+  .gallery{gap:14px}
+  .sticky{left:auto;right:22px;bottom:22px}
+  .sticky a{padding:0 22px;min-height:48px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+
+<body>
+<div class="topbar">🔥 GRAND LAUNCH — 90% OFF — FIRST 20 CUSTOMERS</div>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="#">SuitCase<b>+</b></a>
+    <a class="nav-cta" href="https://www.molipy8trk.com/21H9L95/M44D292/?adv1=SuitCase+___https://s.alicdn.com/@sc04/kf/Ha01dcc57513844fe9b1ea4f3b17f07f3Z.jpg">€29.99 →</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge"><i></i> NEW PRODUCT • LIMITED LAUNCH</div>
+      <h1>Travel better with <em>SuitCase+</em>.</h1>
+      <p class="hero-copy">
+        A smarter 20-inch multifunctional spinner suitcase built around the details that make travel easier.
+      </p>
+      <div class="price-row">
+        <span class="price">€29.99</span>
+        <span class="old">€299.99</span>
+        <span class="discount">90% OFF</span>
+      </div>
+      <a class="cta" href="https://www.molipy8trk.com/21H9L95/M44D292/?adv1=SuitCase+___https://s.alicdn.com/@sc04/kf/Ha01dcc57513844fe9b1ea4f3b17f07f3Z.jpg">Claim my €29.99 launch price →</a>
+      <p class="note">Limited to the first 20 customers.</p>
+      <div class="launch">⚡ <strong>Launch offer:</strong> save €270 on the regular €299.99 price.</div>
+    </div>
+
+    <div class="video-card">
+      <span class="video-tag">▶ SUITCASE+ PRODUCT VIDEO</span>
+      <div class="video-wrap">
+        <video autoplay muted loop playsinline controls preload="auto" poster="suitecase-product.jpg">
+          <source src="https://applos-plus.onrender.com/travels165.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="trust">
+    <div><b>20"</b>compact format</div>
+    <div><b>360°</b>spinner movement</div>
+    <div><b>TSA</b>style lock</div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="section-kicker">Why SuitCase+</div>
+    <h2 class="title">Small details.<br>Big travel upgrade.</h2>
+    <p class="subtitle">Everything customers notice when they actually use a suitcase.</p>
+
+    <div class="benefits">
+      <article class="benefit"><div class="icon">↻</div><div><h3>360° Spinner Wheels</h3><p>Move smoothly and change direction with less effort.</p></div></article>
+      <article class="benefit"><div class="icon">🔒</div><div><h3>TSA-Style Lock</h3><p>A built-in combination lock for added travel convenience.</p></div></article>
+      <article class="benefit"><div class="icon">☕</div><div><h3>Integrated Cup Holder</h3><p>Keep your drink within reach while you're moving.</p></div></article>
+      <article class="benefit"><div class="icon">▣</div><div><h3>20-Inch Format</h3><p>Compact, practical and designed for everyday travel.</p></div></article>
+      <article class="benefit"><div class="icon">⚡</div><div><h3>Quick-Access Front</h3><p>Reach frequently used essentials without opening everything.</p></div></article>
+      <article class="benefit"><div class="icon">↕</div><div><h3>Telescopic Handle</h3><p>Adjust the handle to make pulling more comfortable.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="alt" style="padding-bottom:0;">
+  <div class="container">
+    <div class="section-kicker">✈ Travel gallery</div>
+    <h2 class="title">See every detail.</h2>
+    <p class="subtitle">Scroll through the product photos one by one — full-width, clean and easy to inspect on your phone.</p>
+  </div>
+  <div class="gallery">
+      <figure><img src="https://sc04.alicdn.com/kf/H679f7544c1504514835919fdec0c6f05c/234607685/H679f7544c1504514835919fdec0c6f05c.jpg" alt="SuitCase+ product photo 1" loading="lazy"><figcaption class="gallery-caption">SuitCase+ product detail</figcaption></figure>
+      <figure><img src="https://sc04.alicdn.com/kf/H4846d38e14a3408aa5d44741994328e7z/234607685/H4846d38e14a3408aa5d44741994328e7z.jpg" alt="SuitCase+ product photo 2" loading="lazy"><figcaption class="gallery-caption">SuitCase+ product detail</figcaption></figure>
+      <figure><img src="https://sc04.alicdn.com/kf/H269d2b98e7f64be5a9ba50ee4a7d40d62/234607685/H269d2b98e7f64be5a9ba50ee4a7d40d62.jpg" alt="SuitCase+ product photo 3" loading="lazy"><figcaption class="gallery-caption">SuitCase+ product detail</figcaption></figure>
+      <figure><img src="https://sc04.alicdn.com/kf/H568389efb8f044888d511421f55dfe1cS/234607685/H568389efb8f044888d511421f55dfe1cS.jpg" alt="SuitCase+ product photo 4" loading="lazy"><figcaption class="gallery-caption">SuitCase+ product detail</figcaption></figure>
+      <figure><img src="https://sc04.alicdn.com/kf/Hb89c238ca356451a90b73252b266fed8V/234607685/Hb89c238ca356451a90b73252b266fed8V.jpg" alt="SuitCase+ product photo 5" loading="lazy"><figcaption class="gallery-caption">SuitCase+ product detail</figcaption></figure>
+      <figure><img src="https://sc04.alicdn.com/kf/H89a6d1fbd704485dafe8889e5700b4a9X/234607685/H89a6d1fbd704485dafe8889e5700b4a9X.jpg" alt="SuitCase+ product photo 6" loading="lazy"><figcaption class="gallery-caption">SuitCase+ product detail</figcaption></figure>
+      <figure><img src="https://sc04.alicdn.com/kf/H3b1efbf4c02a495ebae266b5cf569307C/234607685/H3b1efbf4c02a495ebae266b5cf569307C.jpg" alt="SuitCase+ product photo 7" loading="lazy"><figcaption class="gallery-caption">SuitCase+ product detail</figcaption></figure>
+      <figure><img src="https://sc04.alicdn.com/kf/H60d71b84f0ee49d48166937550240492W/234607685/H60d71b84f0ee49d48166937550240492W.jpg" alt="SuitCase+ product photo 8" loading="lazy"><figcaption class="gallery-caption">SuitCase+ product detail</figcaption></figure>
+      <figure><img src="https://sc04.alicdn.com/kf/H39324dd884894cefbdb0f6fe0b3d8277H/234607685/H39324dd884894cefbdb0f6fe0b3d8277H.jpg" alt="SuitCase+ product photo 9" loading="lazy"><figcaption class="gallery-caption">SuitCase+ product detail</figcaption></figure>
+      <figure><img src="https://sc04.alicdn.com/kf/H1db8d0230f4344cab34e920428a1972ab/234607685/H1db8d0230f4344cab34e920428a1972ab.jpg" alt="SuitCase+ product photo 10" loading="lazy"><figcaption class="gallery-caption">SuitCase+ product detail</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <div class="container story">
+    <div class="story-image">
+      <img src="https://s.alicdn.com/@sc04/kf/H90d193e517bf4e5dae451ecb0caa3d92d.jpg?avif=close&webp=close" alt="SuitCase+ multifunctional spinner suitcase" loading="lazy">
+    </div>
+    <div>
+      <div class="section-kicker">Made for the journey</div>
+      <h2 class="title" style="text-align:left">One suitcase.<br>More convenience.</h2>
+      <p class="subtitle" style="text-align:left">
+        The design brings practical travel features together in one compact spinner.
+      </p>
+      <div class="checks">
+        <div class="check"><div class="tick">✓</div><div><b>Easy access</b><span>Keep frequently used travel essentials close.</span></div></div>
+        <div class="check"><div class="tick">✓</div><div><b>Easy movement</b><span>Spinner wheels help you change direction naturally.</span></div></div>
+        <div class="check"><div class="tick">✓</div><div><b>Travel-focused design</b><span>Lock, cup holder and telescopic handle in one compact case.</span></div></div>
+      </div>
+      <a class="cta" href="https://www.molipy8trk.com/21H9L95/M44D292/?adv1=SuitCase+___https://s.alicdn.com/@sc04/kf/Ha01dcc57513844fe9b1ea4f3b17f07f3Z.jpg">Get SuitCase+ →</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="offer">
+  <div class="container">
+    <div class="offer-card">
+      <div class="small">FIRST 20 CUSTOMERS</div>
+      <h2>Get the launch price.</h2>
+      <p>Be among the first 20 customers and pay €29.99 instead of €299.99.</p>
+      <div class="offer-price"><strong>€29.99</strong><del>€299.99</del></div>
+      <a class="cta" href="https://www.molipy8trk.com/21H9L95/M44D292/?adv1=SuitCase+___https://s.alicdn.com/@sc04/kf/Ha01dcc57513844fe9b1ea4f3b17f07f3Z.jpg">Claim 90% OFF →</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-kicker">Simple launch</div>
+    <h2 class="title">Three steps to SuitCase+.</h2>
+    <p class="subtitle">Keep the buying journey clear and friction-free.</p>
+    <div class="steps">
+      <article class="step"><div class="step-num">01</div><h3>Claim the offer</h3><p>Tap the launch button while the first-20 offer is available.</p></article>
+      <article class="step"><div class="step-num">02</div><h3>Complete checkout</h3><p>Enter your delivery and payment details through your checkout.</p></article>
+      <article class="step"><div class="step-num">03</div><h3>Travel with SuitCase+</h3><p>Enjoy your new travel companion on your next journey.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <div class="section-kicker">FAQ</div>
+    <h2 class="title">Questions, answered.</h2>
+    <div class="faq">
+      <button type="button">What is the launch price? <span>+</span></button>
+      <p>€29.99 instead of the regular €299.99 price — a 90% launch discount for the first 20 customers.</p>
+    </div>
+    <div class="faq">
+      <button type="button">How many launch offers are available? <span>+</span></button>
+      <p>The promotion is intended for the first 20 customers, subject to your final offer terms and availability.</p>
+    </div>
+    <div class="faq">
+      <button type="button">What size is SuitCase+? <span>+</span></button>
+      <p>This page presents the product as a 20-inch multifunctional spinner suitcase, based on the product materials supplied.</p>
+    </div>
+    <div class="faq">
+      <button type="button">Does it have a TSA-style lock? <span>+</span></button>
+      <p>The supplied product materials describe a TSA-style combination lock. Confirm the exact final specification with your supplier.</p>
+    </div>
+    <div class="faq">
+      <button type="button">How do I order? <span>+</span></button>
+      <p>Connect the CTA buttons to your live checkout, payment page, WhatsApp flow or order form before publishing.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="order">
+  <div class="container">
+    <div class="final-box">
+      <div class="section-kicker">SuitCase+ launch</div>
+      <h2>Ready for your next trip?</h2>
+      <p>Join the first 20 customers and claim SuitCase+ for €29.99.</p>
+      <a class="cta" href="https://www.molipy8trk.com/21H9L95/M44D292/?adv1=SuitCase+___https://s.alicdn.com/@sc04/kf/Ha01dcc57513844fe9b1ea4f3b17f07f3Z.jpg">Claim €29.99 →</a>
+    </div>
+  </div>
+</section>
+
+<div class="sticky"><a href="https://www.molipy8trk.com/21H9L95/M44D292/?adv1=SuitCase+___https://s.alicdn.com/@sc04/kf/Ha01dcc57513844fe9b1ea4f3b17f07f3Z.jpg">🔥 Get SuitCase+ for €29.99</a></div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo">SuitCase<b>+</b></div>
+      <div></div>
+    </div>
+    <div class="legal">
+      © 2026 SuitCase+. Product specifications, shipping, returns, warranty and promotional terms should be confirmed before publishing.
+      Do not publish unsupported claims or scarcity statements if they are not accurate.
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const faq = btn.parentElement;
+    const open = faq.classList.toggle('open');
+    btn.querySelector('span').textContent = open ? '−' : '+';
+  });
+});
+</script>
+</body>
+</html>
